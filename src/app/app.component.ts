@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   constructor(private httpClient: HttpClient) {}
   ngOnInit() {
-    this.httpClient.get('assets/data.json').subscribe(data => {
+    this.httpClient.get('asset/data.json').subscribe(data => {
       console.log(data);
       this.products = data;
     });
